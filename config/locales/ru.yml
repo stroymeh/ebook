@@ -1,0 +1,23 @@
+ru:
+  cancan:
+    access_denied: Доступ запрещен
+
+  confirm:
+    delete: Вы уверены?
+
+  site_name: eBook
+
+  page_title:
+
+    sessions:
+      new: Вход
+    registrations:
+      new: Регистрация
+    passwords:
+      new: Восстановление пароля
+    confirmations:
+      new: Подтверждение аккаунта
+    unlocks:
+      new: Разблокировка аккаунта
+
+    test: test
