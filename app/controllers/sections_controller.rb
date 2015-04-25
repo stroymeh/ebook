@@ -4,13 +4,19 @@ class SectionsController < ApplicationController
 
   actions :all, :except => [:index, :show]
 
-  belongs_to :book do
-    belongs_to :chapter
+  belongs_to :book, :optional => true do
+    belongs_to :chapter, :optional => true
+  end
+
+  def update
+    update! {
+      render :nothing => true and return if request.xhr?
+    }
   end
 
   protected
 
   def permitted_params
-    params.permit(:section => [:title, :text])
+     { :section => params.fetch(:section, {}).permit(:title, :text) }
   end
 end

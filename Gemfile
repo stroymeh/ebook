@@ -15,6 +15,7 @@ group :default do
   gem 'inherited_resources',           '~> 1.6.0'
   gem 'jquery-rails'
   gem 'jquery-ui-rails'
+  gem 'medium-editor-rails'
   gem 'pg'
   gem 'rails',                         '~> 4.2.0'
   gem 'russian'

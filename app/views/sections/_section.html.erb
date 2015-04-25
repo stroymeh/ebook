@@ -1,10 +1,18 @@
-<h4>
-  <%= section.title? ? section.title : 'Параграф без названия' %>
-  <%= link_to 'Редактировать', edit_book_chapter_section_path(@book, @chapter, section), :class => 'btn btn-link' %>
-</h4>
+<div class="section">
+  <h4>
+    <%= section.title? ? section.title : 'Параграф без названия' %>
 
-<p>
-  <%= section.text %>
-</p>
+    <span class="pull-right">
+      <%= link_to 'Редактировать', edit_book_chapter_section_path(@book, @chapter, section), :class => 'btn btn-link' %>
+      <%= link_to 'Удалить', book_chapter_section_path(@book, @chapter, section), :class => 'btn btn-link', :method => :delete %>
+    </span>
+  </h4>
 
+  <div class="editor js-editor" data-section="<%= section.id %>" data-url="<%= book_chapter_section_path(@book, @chapter, section) %>">
+    <%= section.text.html_safe %>
+  </div>
 
+  <%= simple_form_for [@book, @chapter, section], :html => { :class => 'section-form js-form', :remote => true } do |f| %>
+    <%= f.input :text, :label => false, :as => :hidden, :input_html => { :class => 'js-editable' }%>
+  <% end %>
+</div>
