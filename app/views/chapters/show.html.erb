@@ -1,0 +1,7 @@
+<h4><%= @chapter.title %></h4>
+
+<%= render @chapter.sections %>
+
+<div>
+  <%= link_to 'Добавить параграф', new_book_chapter_section_path(@book, @chapter), :class => 'btn btn-blue' %>
+</div>

@@ -9,6 +9,19 @@ ru:
 
   page_title:
 
+    books:
+      index: Все учебники
+      new:   Добавление нового учебника
+      edit:  Редактирование учебника
+
+    chapters:
+      new:   Добавление новой главы
+      edit:  Редактирование главы
+
+    sections:
+      new:   Добавление нового параграфа
+      edit:  Редактирование параграфа
+
     sessions:
       new: Вход
     registrations:

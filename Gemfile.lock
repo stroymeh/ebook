@@ -267,6 +267,8 @@ GEM
     shellany (0.0.1)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
+    simple-navigation (3.14.0)
+      activesupport (>= 2.3.2)
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
@@ -344,6 +346,7 @@ DEPENDENCIES
   russian
   sass-rails (~> 5.0)
   shoulda-matchers
+  simple-navigation
   simple_form
   spring
   sqlite3

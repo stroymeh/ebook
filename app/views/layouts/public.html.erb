@@ -1,3 +1,9 @@
+<%= content_for :navigation do %>
+  <div class="breadcrumb">
+    <%= render_navigation :renderer => :breadcrumbs, :join_with => ' / ' %>
+  </div>
+<% end %>
+
 <%= content_for :content do %>
   <%= yield %>
 <% end %>

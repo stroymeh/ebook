@@ -1,0 +1,11 @@
+<%= simple_form_for [@book, @chapter] do |f| %>
+  <%= f.input :title, :label => false, :autofocus => true,
+              :input_html => { :class => 'title js-focused-input' },
+              :wrapper_html => { :class => 'title-wrapper' },
+              :placeholder => 'Название главы' %>
+
+  <div class="actions">
+    <%= f.submit 'Сохранить', :class => 'btn btn-blue' %>
+    <%= link_to 'Отмена', book_path(@book), :class => 'btn btn-gray' %>
+  </div>
+<% end %>
