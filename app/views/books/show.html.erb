@@ -1,7 +1,7 @@
 <h4><%= @book.title %></h4>
 
 <h5>Оглавление:</h5>
-<ul class="list-group">
+<ul class="list-group js-sortable js-connected-sortable" data-sort-url="<%= book_sort_path(@book) %>">
   <%= render @book.chapters %>
 </ul>
 

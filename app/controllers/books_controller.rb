@@ -4,6 +4,14 @@ class BooksController < ApplicationController
 
   actions :all
 
+  def sort
+    @book = Book.find(params[:book_id])
+
+    @book.sort_childrens(params[:chapter])
+
+    render :nothing => true and return
+  end
+
   protected
 
   def permitted_params

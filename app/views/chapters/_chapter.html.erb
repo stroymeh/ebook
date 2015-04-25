@@ -1,4 +1,4 @@
-<li class="list-group-item">
+<li class="list-group-item chapter" id="chapter_<%= chapter.id %>">
   <%= link_to chapter.title, book_chapter_path(@book, chapter) %>
 
   <%= link_to 'Редактировать', edit_book_chapter_path(@book, chapter), :class => 'btn btn-link' %>

@@ -8,9 +8,17 @@ class SectionsController < ApplicationController
     belongs_to :chapter, :optional => true
   end
 
+  def create
+    create! { book_chapter_path(@book, @chapter) }
+  end
+
   def update
     update! {
-      render :nothing => true and return if request.xhr?
+      if request.xhr?
+        render :nothing => true and return
+      else
+        redirect_to book_chapter_path(@book, @chapter) and return
+      end
     }
   end
 
