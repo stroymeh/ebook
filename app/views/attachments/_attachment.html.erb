@@ -1,0 +1,15 @@
+<div class="thumbnail">
+  <h4><%= attachment.human_filename %></h4>
+
+  <% if attachment.is_image? %>
+    <%= image_tag attachment.file.thumb.url %>
+  <% else %>
+    <div class="content-type">
+      <%= attachment.content_type %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%#= link_to 'Удалить', section_attachment_path(section, attachment), :method => :delete, :class => 'btn btn-danger btn-xs' %>
+  </div>
+</div>
