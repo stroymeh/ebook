@@ -15,4 +15,13 @@
   <%= simple_form_for [@book, @chapter, section], :html => { :class => 'section-form js-form', :remote => true } do |f| %>
     <%= f.input :text, :label => false, :as => :hidden, :input_html => { :class => 'js-editable' }%>
   <% end %>
+
+
+  <div class="attachments">
+    <%= render section.attachments %>
+
+    <%= simple_form_for([@book, @chapter, section, section.attachments.new], :html => { :multipart => true, :class => 'dropzone js-dropzone' }) do |f| %>
+      <%= f.input :file, :as => :hidden, :input_html => { :multiple => true, :name => 'section[file]' }, :wrapper_html => { :class => :failback } %>
+    <% end %>
+  </div>
 </div>
